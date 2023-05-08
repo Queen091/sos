@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clickable Images</title>
+    <style>
+      .image {
+        display: inline-block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image">
+      <img src="1.jpg" width="200" height="200" onclick="showText('text1')">
+      <div id="text1" style="display:none">cute innocent cat</div>
+    </div>
+    <div class="image">
+      <img src="2.jpg" width="200" height="200" onclick="showText('text2')">
+      <div id="text2" style="display:none">white bright puppy</div>
+    </div>
+    <div class="image">
+      <img src="3.jpg" width="200" height="200" onclick="showText('text3')">
+      <div id="text3" style="display:none">Two beautiful dogs in love </div>
+    </div>
+    
+    <script>
+      function showText(id) {
+        var text = document.getElementById(id);
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
